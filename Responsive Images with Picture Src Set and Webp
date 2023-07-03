@@ -1,0 +1,43 @@
+Responsive Images with Picture tag, Src Set and Web P
+
+ACF Image
+https://www.advancedcustomfields.com/resources/image/ 
+
+Responsive Images in practice. This article is old. The responsive images spec has changed and sizes are now required.
+http://alistapart.com/article/responsive-images-in-practice/ 
+
+Don’t Rely on Default Sizes
+http://alistapart.com/blog/post/article-update-dont-rely-on-default-sizes/ 
+
+Responsive Images in WordPress
+https://make.wordpress.org/core/2015/11/10/responsive-images-in-wordpress-4-4/ 
+
+ACF Image supports Src Set
+https://www.advancedcustomfields.com/resources/image/ 
+
+Using Src Set with images outside of the content editor
+https://sketchbookkeeper.github.io/2018/11/17/using-responsive-images-in-wordpress.html 
+
+
+
+Things to Consider
+
+ACF object vs id
+Picture or Img Tag or CSS background image
+Src set and Sizes
+Alt attribute
+WP add_image_size() 
+Web P conversion - plugin or make one
+Display WebP if browser supports. Fallback 
+Simple Workflow
+Lazyload Lazysizes.js
+Background position 
+Image optimization for fallbacks
+How does SVGs work in this workflow
+Content area - Images added by writers
+Must Use Plugins
+
+Secondary Considerations
+
+Retina (optional) @2x 
+Art Direction - different cropped images

@@ -1,0 +1,28 @@
+DNS training 
+
+Nameserver is the look up 
+
+A Record - ip address 
+Add on domain routes the IP address to the correct site 
+
+CName Record - canonical name
+- [ ] Www.
+- [ ] Stooped.
+- [ ] Cdn.
+- [ ] No ip addresses 
+
+@ - point back to root domain 
+
+MX - Preference ( priority) 
+- host 
+- Usually also needs an A record
+
+TTL - time to live 
+
+Domain dossier to look at DNS stuff 
+
+Virtual host files
+Ping 
+Change the host file / there is also a chrome ext 
+
+Geopeeker.com
