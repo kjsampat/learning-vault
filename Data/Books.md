@@ -1,0 +1,22 @@
+# Recommended Books
+
+- Automate the Boring Stuff with Python
+- Python Data Science Handbook by Jake VanderPlas
+- Practical Statistics for Data Scientists. 50+ Essential Concepts Using R and Python. Peter Bruce
+- Hands-on Machine Learning with SciKit-Learn, Keras, & TensorFlow
+- No Bullshit Guide to Math and Physics 
+- No Bullshit Guid to Linear Algebra
+- Data Science from Scratch by Joel Grus
+- The Hundred Page Machine Learning Book
+- The StatQuest Illustrated Guide to Machine Learning
+- Ace the Data Science interview
+- Python for Data Analysis by Wes McKenny
+- Data Smart. Using Data Science to Transform Information into Insight
+- Think Python
+- SQL for Data Analysis by Cathy Tanimura
+- Fundamentals of Data visualization by Claus O. Wilke
+- Naked Statistics by Charles Wheelan
+- The Master Algorithm by Pedro Domingos
+- Super Intelligence by Nick Bostrom
+- Fundamentals of Data Engineering by 
+- Machine Learning with PyTorch and SciKit Learn
