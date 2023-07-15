@@ -9,8 +9,10 @@ Book online [[https://automatetheboringstuff.com/]]
 
 Expressions are the most basic type of instructions in Python. Expression = Values + Operators. Expressions always reduce to a single value.
 
+```
 >>> 2 + 2
 4
+```
 
 Order of operations by Precedance 
 1. Exponents **
@@ -29,23 +31,31 @@ Decimal numbers are called Floading Point or "floats"
 Text values are called Strings surrounded by quotes such as 'hello world'
 
 String concatenation joins strings together 
+```
 >>> 'hello' + 'world'
 'helloworld'
 >>> 'alice' + 'bob'
 'alicebob'
+```
 
 String Replication repeats strings
+```
 >>> 'Alice' * 3
 'AliceAliceAlice'
+```
 
 Combine concatenation with replication. Note the order of operations here
+```
 >>> 'Hello' + '!' * 10
 'Hello!!!!!!!!!!'
+```
 
 Variable is a box that holds values
+```
 >>> spam = 42
 >>> spam
 42
+```
 
 If Python instruction evaluates to a single value then its an expression, if not its a statement.
 
