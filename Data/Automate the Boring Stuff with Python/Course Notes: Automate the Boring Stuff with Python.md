@@ -81,6 +81,10 @@ Notice the decimal added here
 
 ## Section 2 Flow Control
 
+Boolean Data Type: True, False
+Comparison Operator == != < > <= >=
+Boolean Operator and, or, not
+
 ## Section 3 Functions
 
 ## Section 4 Handling Errors with try/except
