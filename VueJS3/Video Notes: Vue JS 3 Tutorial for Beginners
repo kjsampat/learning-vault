@@ -1,0 +1,70 @@
+# Vue JS 3 Tutorial for Beginners
+
+https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1
+
+## Introduction
+
+### What is Vue? 
+- Javascript Front End Framework for creating dynamic data driven websites and stand alone widgets
+-  
+
+### Vue widgets
+- Vue components are self contained and can be dropped in where needed. 
+- Example: Search Bar
+
+### SPA
+- Single Page Applications
+- Entire site is encloded into a Vue components
+- Browser requests a single webpage from server and a bare bones empty html site is returned. 
+- The browser then loads Vue components such as nav bar, side bar etc. Includes routing from page to page. 
+- Much faster and smoother website experience.
+
+### Whats new in Vue 3 
+- Composition API - gives us a new setup() function
+- Multiple Root Elements
+- Teleport component - render content from one component in a different place in the DOM. Such as a modal loaded from the footer but triggered in the content
+- Suspense component
+- multiple v-models for custom components
+
+## Basics Part 1
+- Vue Js Docs are super helpful https://vuejs.org/guide/introduction.html 
+
+### Setup
+- Add Vue using CDN 
+- `<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>`
+
+### Create a Vue Application
+```
+const app = Vue.createApp()
+app.mount('#app')
+```
+- Creates a new vue app and mounts it to a div with the id `#app`
+- `<div id="app"></div>`
+- Controls anything inside `#app`
+- Can't control anything outside `#app`
+
+**Add a Template**
+```
+const app = Vue.createApp({
+    // data, functions
+    template: '<h2> </>'
+})
+
+app.mount('#app')
+```
+- Creates a new template that displays inside `#app`
+
+**Create a template in HTML instead of JS**
+```
+<div id="app">
+    <h2>I am the template now<h2>
+</div>
+```
+
+### Data and Templates
+
+### Click Events
+
+### Conditional Rendering
+
+
