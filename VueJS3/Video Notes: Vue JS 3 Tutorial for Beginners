@@ -6,7 +6,6 @@ https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1
 
 ### What is Vue? 
 - Javascript Front End Framework for creating dynamic data driven websites and stand alone widgets
--  
 
 ### Vue widgets
 - Vue components are self contained and can be dropped in where needed. 
@@ -49,7 +48,6 @@ const app = Vue.createApp({
     // data, functions
     template: '<h2> </>'
 })
-
 app.mount('#app')
 ```
 - Creates a new template that displays inside `#app`
@@ -62,8 +60,26 @@ app.mount('#app')
 ```
 
 ### Data and Templates
-
+**Add a variable inside the template**
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    }
+})
+app.mount('#app')
+```
+```
+<div id="app">
+    <p>{{ title }} - {{ author }} - {{ age }}<p>
+</div>
+```
 ### Click Events
+
 
 ### Conditional Rendering
 
