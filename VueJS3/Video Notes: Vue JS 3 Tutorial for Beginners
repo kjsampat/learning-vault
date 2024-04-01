@@ -79,7 +79,83 @@ app.mount('#app')
 </div>
 ```
 ### Click Events
+**Directives**
+```
+v-on:click=""
 
+<div id="app">
+    <p>{{ title }} - {{ author }} - {{ age }}<p>
+    <button v-on:click="age++">Increase Age</button>
+    <button v-on:click="age--">Decrease Age</button>
+</div>
+
+```
+Click functions are very common in Vue so there is a shortcut as well. 
+```
+shortcut: @click=""
+<div id="app">
+    <p>{{ title }} - {{ author }} - {{ age }}<p>
+    <button v-on:click="age++">Increase Age</button>
+    <button v-on:click="age--">Decrease Age</button>
+    <div @click="title = 'something else'">Change book title</div>
+</div>
+```
+
+Click events can also be done directly in the component
+```
+<div id="app">
+    <p>{{ title }} - {{ author }} - {{ age }}<p>
+    <button v-on:click="age++">Increase Age</button>
+    <button v-on:click="age--">Decrease Age</button>
+    <div @click="changeTitle">Change book title</div>
+</div>
+```
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    },
+    methods: {
+        changeTitle() {
+            this.title = 'Words of Radiance'
+        }
+    }
+})
+app.mount('#app')
+```
+Must use `this` keyword when accessing variables. 
+
+Can also pass in arguments
+
+```
+<div id="app">
+    <p>{{ title }} - {{ author }} - {{ age }}<p>
+    <button v-on:click="age++">Increase Age</button>
+    <button v-on:click="age--">Decrease Age</button>
+    <div @click="changeTitle('Oathbringer)">Change book title</div>
+</div>
+```
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    },
+    methods: {
+        changeTitle(title) {
+            this.title = title // outputs "Oathbringer" that was passed in via the changeTitle function in the template
+        }
+    }
+})
+app.mount('#app')
+```
 
 ### Conditional Rendering
 
