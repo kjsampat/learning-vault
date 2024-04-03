@@ -254,6 +254,88 @@ Directive `v-show`
 ## Vue Basics Part 2
 
 ### Other mouse events
+**4 types of mouse events**
+- `v-on:mouseover` or `@mouseover`
+- `v-on:mouseleave` or `@mouseleave`
+- `@dblclick`
+- 
+
+```
+<div id="app">
+    <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}<p>
+    </div>
+    <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books<span>
+        <span v-else>Show Books<span>
+    </button>
+
+    <!-- Mouse Events -->
+    <div class="box" @mouseover="handleEvent" >mouseover (enter)<div>
+    <div class="box" @mouseleave="handleEvent" >mouseleave<div>
+    <div class="box" @dblclick="handleEvent" >double click<div>
+    <div class="box"><div>
+</div>
+```
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            showBooks: true,
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    },
+    methods: {
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks // sets to the opposite value. 
+        }
+        handleEvent() {
+            console.log('event') // outputs the word event if triggered
+        }
+    }
+})
+app.mount('#app')
+```
+**Event Object**
+Events automatically create an optional event object. This object is the automtically created as the first parameter. 
+- shows event object in the console
+- e.type shows event object properties
+- there is also a special variable created that can call the event object `$event`
+
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            showBooks: true,
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    },
+    methods: {
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks // sets to the opposite value. 
+        }
+        handleEvent(e) {
+            console.log(e, e.type)
+        }
+    }
+})
+app.mount('#app')
+```
+Passing custom arguments through the mouse event. 
+- passing in custom arguments will take the first position and the event object will show undefined. 
+```
+<div class="box" @mouseover="handleEvent(5)" >mouseover (enter)<div>
+// results in the console logging "5 undefined" since the event object is no longer first. 
+```
+Force the event object inside
+```
+<div class="box" @mouseover="handleEvent($event, 5)" >mouseover (enter)<div>
+// results in the console logging the event object then 5
+```
 
 ### Outputting Lists 
 
