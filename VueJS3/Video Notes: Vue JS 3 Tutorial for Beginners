@@ -43,6 +43,8 @@ app.mount('#app')
 - Can't control anything outside `#app`
 
 **Add a Template**
+- Create a new template that displays inside `#app`
+
 ```
 const app = Vue.createApp({
     // data, functions
@@ -50,7 +52,6 @@ const app = Vue.createApp({
 })
 app.mount('#app')
 ```
-- Creates a new template that displays inside `#app`
 
 **Create a template in HTML instead of JS**
 ```
@@ -159,4 +160,108 @@ app.mount('#app')
 
 ### Conditional Rendering
 
+Use directive `v-if`
+- Setting v-if to true will show the component. Setting this to false would hide it. 
+- A better way to do this is to use a variable in the template. For example `showBooks`
+
+```
+<div id="app">
+    <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}<p>
+    </div>
+</div>
+```
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            showBooks: true,
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    },
+    methods: {
+        
+    }
+})
+app.mount('#app')
+```
+
+Giving the use ability to toggle show/hide using button
+```
+<div id="app">
+    <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}<p>
+    </div>
+    <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books<span>
+        <span v-if="!showBooks">Show Books<span>
+    </button>
+</div>
+```
+```
+const app = Vue.createApp({
+    data() {
+        return {
+            showBooks: true,
+            title: 'The Final Empire',
+            author: 'Brandon Sanderson',
+            age: 45
+        }
+    },
+    methods: {
+        toggleShowBooks() {
+            this.showBooks = !this.showBooks // sets to the opposite value. 
+        }
+    }
+})
+app.mount('#app')
+```
+
+Directive `v-else`
+
+```
+<div id="app">
+    <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}<p>
+    </div>
+    <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books<span>
+        <span v-else>Show Books<span>
+    </button>
+</div>
+```
+
+Directive `v-show`
+- uses CSS to hide content
+- better performance when hiding and showing content frequently.
+
+```
+<div id="app">
+    <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}<p>
+    </div>
+    <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books<span>
+        <span v-else>Show Books<span>
+    </button>
+
+    <div v-show="showBooks">currently showing books</div>
+</div>
+```
+
+## Vue Basics Part 2
+
+### Other mouse events
+
+### Outputting Lists 
+
+### Attribute Binding
+
+### Dynamic Classes
+
+### Challenge: Toggling Favs
+
+### Computed Properties
 
